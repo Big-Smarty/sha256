@@ -3,5 +3,5 @@
 
 std::string sha256(std::string data) {
   auto padded = pad(data);
-  return "";
+  return padded;
 }
