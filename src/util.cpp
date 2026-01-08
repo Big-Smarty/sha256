@@ -1,4 +1,5 @@
 #include "util.hpp"
+#include <bitset>
 #include <cassert>
 #include <string>
 
@@ -19,15 +20,16 @@ std::string gen_random(const int len) {
     return tmp_s;
 }
 
+int calculate_k(int size) {
+  return (448 - 1 - size % 512 + 512) % 512;
+}
+
 std::string pad(std::string &data) {
   auto size = data.size();
-  // TODO: fix k calculation
-  auto k = (size + 1)%512 - 448;
-  auto zero_chars_required = k / 8;
-  printf("size: %zu, zero chars required: %zu\n", size, zero_chars_required);
+  auto k = calculate_k(size);
+  auto zero_chars_required = k;
   std::string padding(zero_chars_required, 0);
-  printf("padding: %s", padding.c_str());
-  std::string out = data + FIRST_PAD + padding + std::to_string(to_big_endian(size));
+  std::string out = data + FIRST_PAD + padding + std::bitset<64>(to_big_endian(static_cast<uint64_t>(size))).to_string();
   assert(out.size() % 512 == 0);
   return out;
 }
