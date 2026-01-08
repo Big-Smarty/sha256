@@ -1,0 +1,16 @@
+[
+{
+  "directory": "/home/bigsmarty/projects/sha256",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++23", "-isystem", "/home/bigsmarty/.xmake/packages/o/openssl/1.1.1-w/6c51ab6278e2479b883dffafac69fdaf/include", "-DNDEBUG", "-o", "build/.objs/sha256/linux/x86_64/release/src/util.cpp.o", "src/util.cpp"],
+  "file": "src/util.cpp"
+},
+{
+  "directory": "/home/bigsmarty/projects/sha256",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++23", "-isystem", "/home/bigsmarty/.xmake/packages/o/openssl/1.1.1-w/6c51ab6278e2479b883dffafac69fdaf/include", "-DNDEBUG", "-o", "build/.objs/sha256/linux/x86_64/release/src/main.cpp.o", "src/main.cpp"],
+  "file": "src/main.cpp"
+},
+{
+  "directory": "/home/bigsmarty/projects/sha256",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++23", "-isystem", "/home/bigsmarty/.xmake/packages/o/openssl/1.1.1-w/6c51ab6278e2479b883dffafac69fdaf/include", "-DNDEBUG", "-o", "build/.objs/sha256/linux/x86_64/release/src/sha256.cpp.o", "src/sha256.cpp"],
+  "file": "src/sha256.cpp"
+}]
