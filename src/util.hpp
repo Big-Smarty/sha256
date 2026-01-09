@@ -5,7 +5,7 @@
 #include <string>
 #include <unistd.h>
 
-std::string gen_random(const int len);
+std::string gen_random();
 
 template <typename T> inline T to_big_endian(T input) {
   if constexpr (std::endian::native == std::endian::big) {
@@ -21,4 +21,4 @@ template <typename T> inline T to_big_endian(T input) {
   }
 }
 
-std::string pad(std::string &data);
+std::string pad(const std::string &data);
