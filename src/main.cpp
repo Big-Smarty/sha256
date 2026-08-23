@@ -5,15 +5,6 @@
 #include "util.hpp"
 #include "sha256.hpp"
 
-// TODO: Word-klasse komplett wegschmeißen; DONE
-// TODO: statt words einfach direkt uint32_t nutzen; DONE
-// TODO: funktion implementieren die PADDED_DATA in einen word-array konvertiert; DONE
-// NOTE: input-chunks mit memcpy in einen uint32_t kopieren und dann mit to_big_endian korrigieren; DONE
-// TODO: sha256 logical functions implementieren; DONE
-// TODO: ROTR und ROTL implementieren; DONE
-// TODO: konstanten importieren; DONE
-// TODO: main loop implementieren; done?
-
 std::string to_hex(unsigned char* data, size_t len) {
     std::stringstream ss;
     for(size_t i = 0; i < len; ++i) {
@@ -35,6 +26,6 @@ int main(int argc, char **argv) {
             return -1;
         }
     }
-    printf("ALL TESTS FINISHED SUCCESSFULLY!!!!!!!!!!!!!\n");
+    printf("All tests passed.\n");
     return 0;
 }

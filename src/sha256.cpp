@@ -20,8 +20,6 @@ uint32_t ssig1(uint32_t x) { return (rotr(x, 17) ^ rotr(x, 19) ^ (x >> 10)); }
 std::string sha256(std::string data) {
   std::array<uint32_t, 8> H = {0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a,
                                0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19};
-  // TODO: parse padded data into N 512 bit large blocks, consisting of 16
-  // uint32_t words
   auto padded = pad(data);
 
   // parse into words
